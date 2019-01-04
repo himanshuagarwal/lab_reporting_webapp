@@ -1,0 +1,25 @@
+<% include ./partials/adminhead %>
+<div class="row">
+  <div class="col-md-12 m-auto">
+  <p class="lead mb-3 text-center">View Invoices</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Inovice ID</th>
+        <th>Passkey</th>
+        <th></th>
+      </tr>
+    </thead>
+     <tbody>  
+        <% include ./partials/messages %>
+         <% print.forEach(function (user) { %>
+            <tr>  
+                <td><%= user.iid %></td>  
+                <td><%= user.password %></td>
+                <td><a href="/admin/invoicedel?id=<%= user.id %>" class="btn btn-secondary btn-sm">Delete</a></td>
+            </tr>                                   
+         <% }) %>
+         </tbody>
+  </table>
+   </div>
+</div>

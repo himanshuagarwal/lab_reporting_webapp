@@ -1,0 +1,49 @@
+<% include ./partials/adminhead %>
+<div class="row mt-5">
+    <div class="col-sm-3 m-auto">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <h2><%= print[0].total_users %></h2>
+                        <div>Patients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <a class="text-white" href="/admin/getinvoice">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 m-auto">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <i class="fa fa-book fa-5x"></i>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <h2><%= print[0].total_reports %></h2>
+                        <div>Reports</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <a class="text-white" href="/admin/getreports">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 m-auto">
+    </div>
+    <div class="col-sm-3 m-auto">
+    </div>
+</div>

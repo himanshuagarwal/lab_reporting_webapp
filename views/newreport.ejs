@@ -1,0 +1,67 @@
+<% include ./partials/adminhead %>
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Report</h1>
+      <% include ./partials/messages %>
+      <form action="/admin/newreport" enctype="multipart/form-data" method="POST">
+        <div class="form-group">
+          <label for="iid">Enter Invoice ID:</label>
+          <input
+            type="text"
+            id="iid"
+            name="iid"
+            class="form-control"
+            placeholder="Enter Invoice ID"
+            value="<%= typeof iid != 'undefined' ? iid : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Enter Patient Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Patient Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="testname">Enter Test Name:</label>
+          <input
+            type="text"
+            id="testname"
+            name="testname"
+            class="form-control"
+            placeholder="Enter Test Name"
+            value="<%= typeof testname != 'undefined' ? testname : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">Enter Invoice Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            class="form-control"
+            placeholder="Enter Invoice Date"
+            value="<%= typeof date != 'undefined' ? date : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="reportup">Upload Report (Only PDF) </label>
+          <input
+            type="file"
+            id="reportup"
+            name="reportup"
+            class="form-control"
+            placeholder="Choose report"
+            value="<%= typeof reportup != 'undefined' ? reportup : '' %>"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Add Report</button>
+      </form>
+    </div>
+  </div>
+</div>

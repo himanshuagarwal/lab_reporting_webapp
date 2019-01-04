@@ -1,0 +1,33 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+  <h2>Dashboard <a href="/logout" class="btn btn-secondary btn-sm pull-right">Logout</a>
+</h2>
+  <p class="lead mb-3">View Reports (Invoice ID :<%= user.iid %>) </p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Inovice ID</th>
+        <th>Paitent Name</th>
+        <th>Test</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+     <tbody>  
+        <% include ./partials/messages %>
+         <% print.forEach(function (report) { %>
+            <tr>  
+                <td><%= report.iid %></td>  
+                <td><%= report.name %></td>
+                <td><%= report.testname %></td>
+                <td><%= report.date.toDateString()  %></td>
+                <td><a href="/view/<%= report.reportid %>" class="btn btn-secondary btn-sm">View</a></td>
+            </tr>                                   
+         <% }) %>
+         </tbody>
+  </table>
+   </div>
+  </div>
+</div>
+
